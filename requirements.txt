@@ -6,3 +6,6 @@ fiona
 pyproj
 shapely
 aiofiles
+httpx
+pytest
+pytest-asyncio
