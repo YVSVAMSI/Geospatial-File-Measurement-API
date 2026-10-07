@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMeasure API Explorer</title>
+    <meta name="description" content="Process Geospatial Files beautifully.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe-1"></div>
+        <div class="globe-2"></div>
+    </div>
+    <div class="app-container">
+        <header>
+            <h1>GeoMeasure <span class="highlight">API</span></h1>
+            <p>Upload your Shapefile (.zip) or .KML to instantly compute exact geometry measurements safely.</p>
+        </header>
+
+        <section class="upload-section">
+            <div id="drop-zone" class="drop-zone">
+                <div class="icon">📁</div>
+                <p>Drag & Drop your .zip or .kml here</p>
+                <span>or</span>
+                <button id="browse-btn" class="btn">Browse Files</button>
+                <input type="file" id="file-input" accept=".zip,.kml" hidden>
+            </div>
+            <div id="upload-status" class="status-msg hidden"></div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="card file-info">
+                <h2>File Info</h2>
+                <div id="file-details" class="details-grid"></div>
+            </div>
+            
+            <div class="card measurements">
+                <h2>Extracted Features</h2>
+                <div class="table-container">
+                    <table id="features-table">
+                        <thead>
+                            <tr>
+                                <th>Feature ID</th>
+                                <th>Geometry Type</th>
+                                <th>Measurement</th>
+                                <th>Properties</th>
+                            </tr>
+                        </thead>
+                        <tbody id="features-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card map-card">
+                <h2>Interactive Map Visualization</h2>
+                <div id="map" class="map-container"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

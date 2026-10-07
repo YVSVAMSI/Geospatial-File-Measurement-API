@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample Aereo Polygon</name>
+    <description>A simple square polygon to test area calculation.</description>
+    <Placemark>
+      <name>Test Square</name>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -122.0822035425683,37.42228990140251,0
+              -122.0822035425683,37.42328990140251,0
+              -122.0812035425683,37.42328990140251,0
+              -122.0812035425683,37.42228990140251,0
+              -122.0822035425683,37.42228990140251,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>
